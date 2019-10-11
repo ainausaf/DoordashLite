@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_feed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/iv_restaurant_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toStartOf="@id/restaurant_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/restaurant_info"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_restaurant_image"
+            tools:layout_editor_absoluteX="60dp">
+
+            <TextView
+                android:id="@+id/restaurant_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="Amarin Thai"
+                />
+
+            <TextView
+                android:id="@+id/restaurant_cuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Chinese Soup"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/restaurant_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:gravity="right|center_vertical"
+            android:textAlignment="gravity"
+            android:textSize="15dp"
+            android:text="30 min"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/restaurant_info"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

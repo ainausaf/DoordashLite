@@ -1,4 +1,8 @@
 package com.example.doordashlite.scope;
 
-public class ActivityScope {
+import javax.inject.Scope;
+
+@Scope
+public @interface ActivityScope {
 }
+
